@@ -5,3 +5,5 @@ test_bot.*
 fastapi/
 .vercel
 .env*
+
+uv.lock
