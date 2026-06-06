@@ -1,0 +1,14 @@
+[project]
+name = "lets-eat-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ollama",
+    "requests",
+    "bs4",
+    "slack-bolt",
+    "apscheduler",
+    "python-dotenv",
+]
