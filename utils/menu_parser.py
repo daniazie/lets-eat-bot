@@ -1,5 +1,5 @@
 from ollama import Client
-
+from dotenv import load_dotenv
 from typing_extensions import Literal, List, Dict, Any
 from pydantic import BaseModel, Field
 
@@ -10,6 +10,8 @@ from bs4 import BeautifulSoup
 import numpy as np
 import requests
 import os
+
+load_dotenv()
 
 client = Client(
     host="https://ollama.com",
