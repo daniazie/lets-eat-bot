@@ -31,6 +31,7 @@ def schedule_message(daily_menu, scheduled_date, scheduled_time):
     
 
 def post_menu():
+    logger.info("Parsing menu...")
     weekly_menu = parse_menu()
     scheduled_time = datetime.time(10, 0)
     schedule_dates = [datetime.datetime.fromisoformat(menu['date']) for menu in weekly_menu['menu']]
@@ -40,6 +41,7 @@ def post_menu():
         schedule_message(daily_menu, date, scheduled_time)
 
 if __name__ == "__main__":
+    logger.info("Loading bot...")
     scheduler = BackgroundScheduler()
     job = scheduler.add_job(post_menu, 'cron', day_of_week='mon', hour=9, minute=30)
     scheduler.start()
