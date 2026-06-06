@@ -1,6 +1,10 @@
 ollama
 transformers
+torch
+torchaudio
+torchvision
 requests
 bs4
 slack-bolt
 apscheduler
+pydantic
