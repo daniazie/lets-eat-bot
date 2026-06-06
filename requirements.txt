@@ -3,5 +3,3 @@ requests
 bs4
 slack-bolt
 apscheduler
-pydantic
-pydantic-core
