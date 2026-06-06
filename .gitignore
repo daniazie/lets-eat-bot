@@ -6,3 +6,5 @@ fastapi/
 .env*
 
 uv.lock
+.vercel_python_packages
+*/__pycache__
