@@ -7,3 +7,4 @@ fastapi/
 
 .vercel_python_packages
 */__pycache__
+requirements.txt
