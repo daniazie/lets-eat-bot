@@ -6,14 +6,15 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 import datetime
 import logging
-import json
 import os
 
-from menu_parser import parse_menu, get_daily_menu
+from utils.menu_parser import parse_menu, get_daily_menu
 
 logger = logging.getLogger(__name__)
+
 app = App(token=os.environ.get("SLACK_API_TOKEN"))
 channel_id = os.environ['CHANNEL_ID']
+
 load_dotenv()
 
 def schedule_message(daily_menu, scheduled_date, scheduled_time):
@@ -27,6 +28,7 @@ def schedule_message(daily_menu, scheduled_date, scheduled_time):
         logger.info(result)
     except SlackApiError as e:
         logger.error("Error scheduling message: {}".format(e))
+    
 
 def post_menu():
     weekly_menu = parse_menu()

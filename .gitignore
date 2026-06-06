@@ -2,3 +2,4 @@
 slack_tokens.env
 
 test_bot.*
+fastapi/

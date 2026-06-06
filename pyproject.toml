@@ -1,0 +1,17 @@
+[project]
+name = "lets-eat-bot"
+version = "0.1.0"
+requires-python = "==3.12.*"
+dependencies = [
+  "bs4",
+  "ollama",
+  "apscheduler",
+  "torch",
+  "torchaudio",
+  "torchvision",
+  "slack-bolt",
+  "transformers"
+]
+
+[tool.vercel.scripts]
+build = "python bot.py"
