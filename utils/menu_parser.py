@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 from ollama import Client
 
 from typing_extensions import Literal, List, Dict, Any
@@ -10,7 +9,6 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import numpy as np
 import requests
-import json
 import os
 
 client = Client(

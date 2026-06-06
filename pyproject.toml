@@ -10,7 +10,9 @@ dependencies = [
   "torchaudio",
   "torchvision",
   "slack-bolt",
-  "transformers"
+  "transformers",
+  "requests",
+  "pillow"
 ]
 
 [tool.vercel.scripts]

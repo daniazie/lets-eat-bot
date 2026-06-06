@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 from slack_sdk.errors import SlackApiError
@@ -14,8 +13,6 @@ logger = logging.getLogger(__name__)
 
 app = App(token=os.environ.get("SLACK_API_TOKEN"))
 channel_id = os.environ['CHANNEL_ID']
-
-load_dotenv()
 
 def schedule_message(daily_menu, scheduled_date, scheduled_time):
     schedule = datetime.datetime.combine(scheduled_date, scheduled_time).strftime("%s")
